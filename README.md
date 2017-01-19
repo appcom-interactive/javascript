@@ -615,38 +615,38 @@ Other Style Guides
 -   [7.4](#functions--note-on-blocks) **Note:** ECMA-262 defines a `block` as a list of statements. A function declaration is not a statement. [Read ECMA-262's note on this issue](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
 
     ```javascript
-      // bad
-      if (currentUser) {
-        function test() {
-          console.log('Nope.');
-        }
-      }
+          // bad
+          if (currentUser) {
+            function test() {
+              console.log('Nope.');
+            }
+          }
 
-      // good
-      let test;
-      if (currentUser) {
-        test = () => {
-          console.log('Yup.');
-        };
-      }
+          // good
+          let test;
+          if (currentUser) {
+            test = () => {
+              console.log('Yup.');
+            };
+          }
     ```
 
-    <a name="functions--arguments-shadow"></a><a name="7.5"></a>
+        <a name="functions--arguments-shadow"></a><a name="7.5"></a>
 -   [7.5](#functions--arguments-shadow) Never name a parameter `arguments`. This will take precedence over the `arguments` object that is given to every function scope.
 
     ```javascript
-      // bad
-      function foo(name, options, arguments) {
-        // ...
-      }
+          // bad
+          function foo(name, options, arguments) {
+            // ...
+          }
 
-      // good
-      function foo(name, options, args) {
-        // ...
-      }
+          // good
+          function foo(name, options, args) {
+            // ...
+          }
     ```
 
-    <a name="es6-rest"></a><a name="7.6"></a>
+        <a name="es6-rest"></a><a name="7.6"></a>
 -   [7.6](#es6-rest) Never use `arguments`, opt to use rest syntax `...` instead. eslint: [`prefer-rest-params`](http://eslint.org/docs/rules/prefer-rest-params)
 
     > Why? `...` is explicit about which arguments you want pulled. Plus, rest arguments are a real Array, and not merely Array-like like `arguments`.
@@ -2000,28 +2000,28 @@ Other Style Guides
 -    [17.3](#comments--spaces) Start all comments with a space to make it easier to read. eslint: [`spaced-comment`](http://eslint.org/docs/rules/spaced-comment)
 
      ```javascript
-          // bad
-          //is current tab
-          const active = true;
+                // bad
+                //is current tab
+                const active = true;
 
-          // good
-          // is current tab
-          const active = true;
+                // good
+                // is current tab
+                const active = true;
 
-          // bad
-          /**
-           *make() returns a new element
-           *based on the passed-in tag name
-           */
-          function make(tag) {
+                // bad
+                /**
+                 *make() returns a new element
+                 *based on the passed-in tag name
+                 */
+                function make(tag) {
 
-            // ...
+                  // ...
 
-            return element;
-          }
+                  return element;
+                }
 
-          // good
-          /**
+                // good
+                /**
      * make() returns a new element
      * based on the passed-in tag name
      */
@@ -2569,49 +2569,49 @@ Other Style Guides
 -    [21.2](#coercion--strings)  Strings:
 
      ```javascript
-       // => this.reviewScore = 9;
+             // => this.reviewScore = 9;
 
-       // bad
-       const totalScore = this.reviewScore + ''; // invokes this.reviewScore.valueOf()
+             // bad
+             const totalScore = this.reviewScore + ''; // invokes this.reviewScore.valueOf()
 
-       // bad
-       const totalScore = this.reviewScore.toString(); // isn't guaranteed to return a string
+             // bad
+             const totalScore = this.reviewScore.toString(); // isn't guaranteed to return a string
 
-       // good
-       const totalScore = String(this.reviewScore);
+             // good
+             const totalScore = String(this.reviewScore);
      ```
 
-     <a name="coercion--numbers"></a><a name="21.3"></a>
+           <a name="coercion--numbers"></a><a name="21.3"></a>
 -    [21.3](#coercion--numbers) Numbers: Use `Number` for type casting and `parseInt` always with a radix for parsing strings. eslint: [`radix`](http://eslint.org/docs/rules/radix)
 
      ```javascript
-       const inputValue = '4';
+             const inputValue = '4';
 
-       // bad
-       const val = new Number(inputValue);
+             // bad
+             const val = new Number(inputValue);
 
-       // bad
-       const val = +inputValue;
+             // bad
+             const val = +inputValue;
 
-       // bad
-       const val = inputValue >> 0;
+             // bad
+             const val = inputValue >> 0;
 
-       // bad
-       const val = parseInt(inputValue);
+             // bad
+             const val = parseInt(inputValue);
 
-       // good
-       const val = Number(inputValue);
+             // good
+             const val = Number(inputValue);
 
-       // good
-       const val = parseInt(inputValue, 10);
+             // good
+             const val = parseInt(inputValue, 10);
      ```
 
-     <a name="coercion--comment-deviations"></a><a name="21.4"></a>
+           <a name="coercion--comment-deviations"></a><a name="21.4"></a>
 -    [21.4](#coercion--comment-deviations) If for whatever reason you are doing something wild and `parseInt` is your bottleneck and need to use Bitshift for [performance reasons](https://jsperf.com/coercion-vs-casting/3), leave a comment explaining why and what you're doing.
 
      ```javascript
-       // good
-       /**
+             // good
+             /**
      * parseInt was the reason my code was slow.
      * Bitshifting the String to coerce it to a
      * Number made it a lot faster.
@@ -3315,3 +3315,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ## Amendments
 
 Change `max_line_length` to 120
+
+#### install airbnb config (https://www.npmjs.com/package/eslint-config-airbnb)
+`npm install --save-dev eslint-config-airbnb eslint eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react`
