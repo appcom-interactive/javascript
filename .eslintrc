@@ -10,6 +10,16 @@
         "exports": "never",
         "functions": "ignore"
       }
+    ],
+    "max-len": [
+      2,
+      {
+        "code": 120,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreStrings": true,
+        "ignoreUrls": true
+      }
     ]
   }
 }
