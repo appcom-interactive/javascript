@@ -353,7 +353,7 @@ Other Style Guides
     ```
 
   <a name="es6-array-spreads"></a><a name="4.3"></a>
--   [4.3](#es6-array-spreads) Use array spreads `...` to copy arrays.
+-   [4.3](#es6-array-spreads) Use array spreads `...` to copy arrays. eslint: [`prefer-spread`](http://eslint.org/docs/rules/prefer-spread)
 
     ```javascript
     // bad
