@@ -3266,7 +3266,10 @@ Other Style Guides
 
 (The MIT License)
 
-Copyright (c) 2017 appcom interactive GmbH
+Copyright for portions of project appcom conventions javascript are held
+by Airbnb, 2014-2017 as part of project Airbnb JavaScript Style Guide.
+All other copyright for project appcom conventions javascript are held
+by appcom interactive GmbH, 2017.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -3291,7 +3294,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Amendments
 
-Change `max_line_length` to 120
+* Change `max_line_length` to 120
+* Force alphabetical attribute sort order when declaring objects (scoped by shorthand declarations)
+* Add various eslint rules, where formerly unknown (eg. prefer-spread, no-eval, ...)
+* Do not use dangling comma, since the advantage of cleaner git diffs is less important than the implications it makes
 
 #### install airbnb config (https://www.npmjs.com/package/eslint-config-airbnb)
 `npm install --save-dev eslint-config-airbnb eslint eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react`
