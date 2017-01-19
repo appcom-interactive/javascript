@@ -224,9 +224,9 @@ Other Style Guides
     ```
 
   <a name="objects--grouped-shorthand"></a><a name="3.7"></a>
--   [3.5](#objects--grouped-shorthand) Group your shorthand properties at the beginning of your object declaration.
+-   [3.5](#objects--grouped-shorthand) Group your shorthand properties at the beginning of your object declaration. Also group within these two scopes (shorthand and non shorthand) alphabetically.
 
-    > Why? It's easier to tell which properties are using the shorthand.
+    > Why? It's easier to tell which properties are using the shorthand. The alphabetical sort order helps finding attributes in larger object definitions.
 
     ```javascript
     const anakinSkywalker = 'Anakin Skywalker';
@@ -242,7 +242,7 @@ Other Style Guides
       anakinSkywalker,
     };
 
-    // good
+    // bad, since this is not alphabetically
     const obj = {
       lukeSkywalker,
       anakinSkywalker,
@@ -250,6 +250,16 @@ Other Style Guides
       twoJediWalkIntoACantina: 2,
       episodeThree: 3,
       mayTheFourth: 4,
+    };
+
+    // good
+    const obj = {
+      anakinSkywalker,
+      lukeSkywalker,
+      episodeOne: 1,
+      episodeThree: 3,
+      mayTheFourth: 4,
+      twoJediWalkIntoACantina: 2,
     };
     ```
 
